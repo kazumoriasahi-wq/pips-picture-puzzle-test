@@ -22,6 +22,8 @@ jobs:
         run: |
           mkdir -p public
           unzip -oq PIPS-PICTURE-PUZZLE-playable.zip -d public
+          unzip -oq PIPS-PICTURE-PUZZLE-playables-overlay.zip -d public
+          test -f public/playables/platform.js
           test -f public/index.html
           test -f public/assets/scene-original.jpg
           touch public/.nojekyll
